@@ -1,0 +1,40 @@
+﻿<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+
+		<a>{$ntieude}</a></li>
+
+	</ul>
+
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+
+	{$nnoidung}
+
+	<br>
+
+	<div class="ui-widget-content" style="width:200px;line-height:21px;text-align:left; padding-left:10px; float:left">
+
+		<strong>Những tin liên quan</strong></div>
+
+		<br><br>
+
+		<div style="padding-left:15px; text-align:left">
+
+								{section name = k loop =$nd}
+
+							
+
+								<span class="ui-icon ui-icon-arrowthick-1-e" style="position:absolute;margin-left:-15px;"></span><a href="sim-so-dep-gia-re-viettel-mobifone-vinaphone-{$nd[k].aid}-{$nd[k].tieude}.html" style="font-size:11px; line-height:22px">{$nd[k].atieude}</a><br>
+
+								{/section}
+
+		</div>
+
+	<center>{$sua}</center>
+
+</div>
+
+</div>
+

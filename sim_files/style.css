@@ -1,0 +1,276 @@
+body{
+	font-size:12px;
+	font-family: tahoma;
+	background:url(images/bg.jpg) center 0px fixed no-repeat;
+	color: #666665;
+	padding:0;
+	margin:0;
+}
+
+img{
+	border: 0px;
+}
+
+a{
+	color: #0066cc;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #000000;
+}
+.wrap{
+	width:958px; 
+}
+
+.banner{
+	background: url(images/banner_03_en.png) no-repeat;
+	height: 117px;
+	text-align:left
+	
+}
+
+.menutop{
+	margin-top: 86px;
+	display:inline-block;
+}
+
+.menutop li{
+	float:left;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	margin-right: 2px;
+	height: 31px;
+}
+
+
+.menutop a{
+	display:block;
+	background: url(images/menu_default_r.png) top right no-repeat;
+	height: 15px;
+	padding: 8px 10px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+
+.menutop a:hover, .menutop .selected a{
+	background: url(images/menu_blue_r.png) right top  no-repeat;
+	color: #0066b3;
+}
+
+.content{
+	background: #FFFFFF;
+	padding-top: 5px;
+}
+
+.content .bentrai{
+	width: 198px;
+	float:left;
+	margin-left: 4px;
+	margin-right: 10px;
+	text-align:left;
+}
+
+.listmenu{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.listmenu li{
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	border-top: 1px solid #FFFFFF;
+}
+
+.listmenu li li{
+	display: none;
+}
+
+.listmenu li a{
+	display: block;
+	padding: 8px 25px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #333333;
+	font-family: arial;
+}
+
+.listmenu li a:hover, .listmenu .selected a{
+	background: #fcfdfe url(images/active.gif) no-repeat;
+	color: #0066b3;
+	padding-left: 40px;
+	
+}
+
+.content .menucontent{
+	background: #e2ecf6 url(images/catemodule_footer.jpg) bottom no-repeat;
+	margin-bottom: 10px;
+	text-align:left;
+	padding: 5px;
+	padding-bottom: 10px;
+	width: 188px;
+}
+
+.content .menucontent h2{
+	padding: 0px;
+	margin: -5px;
+	font-size: 14px;
+	background: url(images/catemodule_head.gif) no-repeat;
+	width: 178px;
+	height: 22px;
+	padding: 15px 10px;
+	color: white;
+	text-align:left;
+}
+
+.content .cartcontent{
+	background: #0166b4 url(images/search_footer.jpg) bottom no-repeat;
+	margin-bottom: 10px;
+	text-align:left;
+	padding: 5px;
+	padding-bottom: 5px;
+	width: 188px;
+}
+
+.content .cartcontent h2{
+	padding: 0px;
+	margin: -5px;
+	font-size: 14px;
+	background: url(images/search_header.jpg) no-repeat;
+	height: 6px;
+	padding: 15px 0px;
+	color: white;
+	margin-bottom: 3px;
+	text-align:center;
+}
+
+.benphai{
+	float:left;
+	margin-left: 10px;
+	margin-right: 4px;
+}
+
+.bentrong{
+	background: url(images/intro_header.jpg) 0px 0px no-repeat;
+	width: 534px;
+	float:left;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.bentrong h1, .bentrong h2{
+	padding: 0px;
+	margin: 0px;
+	font-size: 16px;
+	color: #0066cc;
+	background: url(images/inside.gif) left center no-repeat;
+	display: block;
+	height: 20px;
+	padding: 5px 20px;
+	margin: 20px 0px;
+	margin-bottom: 5px;
+}
+
+.bentrong .title{
+	background: url(images/title.gif) repeat-x;
+	height: 31px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.cartcontent .title{
+	background: url(images/title.gif) repeat-x;
+	height: 20px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.bentrong .sim{
+	text-align:center;
+	color: #0066b3;
+	font-weight: bold;
+	font-size:14px;
+}
+
+.footer{
+	height: 115px;
+	background: url(images/footer_02.png) center;
+	width: 100%;
+}
+
+.footer .menubottom{
+	text-align:left;
+	height: 47px;
+	width:250px;
+	float:left
+}
+
+.footer .menubottom li{
+	display: table-cell;
+	width: 115px;
+	padding-top: 15px;
+	padding-left: 10px;
+}
+
+.footer .menubottom li a{
+	color: #FFFFFF;
+}
+
+.footer .footercontent{
+	display:block;
+	width: 650px;
+	float:right;
+	margin-top: 20px;
+	text-align:left
+}
+
+.simsearch{
+	padding: 10px 20px;
+	margin-bottom: 5px;
+	background: #f1f0f0;
+	text-align:center;
+	border: 1px solid #8c8c8c;
+	text-align: left;
+}
+
+.form{
+
+	background: #FFFFFF url(images/icon-search.jpg) center left no-repeat;
+	height: 23px;
+	border: 1px solid #277cbf;
+	padding: 0px;
+	display: block;
+		padding-left: 23px;
+}
+
+.simsearch select{
+	border: 0px;
+	height: 20px;
+}
+
+.simsearch input[type=text]{
+	border: 0px;
+	border-right: 1px solid #277cbf;
+	height: 20px;
+	font-weight: bold;
+	color: #dddddd;
+}
+
+.simsearch input[type=submit]{
+	border: 0px;
+	height: 22px;
+	width: 56px;
+	background: url(images/button-search-header.jpg) center left;
+	cursor:pointer;'
+
+}
+
+.simsearch .search-hint{
+	padding-top: 10px;
+	text-align:left;
+}

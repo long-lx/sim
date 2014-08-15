@@ -1,0 +1,7 @@
+AuthUserFile /home/nganhangsimsodep/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Private Area"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>

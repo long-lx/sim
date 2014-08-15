@@ -1,0 +1,139 @@
+﻿
+<div class="dv">
+<form method="get" action="" >
+<table style="width: 100%" cellspacing="0" cellpadding="0">
+		<tr>
+			
+			<td>
+			<table style="width: 100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+										<img alt="" src="../images/bgd1.gif" /></td>
+					<td class="style18x"><strong>Tìm ki&#7871;m cod và b&#432;u ph&#7849;m</strong></td>
+					<td>
+										<img alt="" src="../images/bgd2.gif" /></td>
+				</tr>
+			</table>
+			</td>
+			
+		</tr>
+		<tr class="bo2">
+			<td class="bo2">
+			<input name="act" type="hidden" value="quanlycod"><table style="width: 100%; background-color:#cccccc" cellspacing="1" cellpadding="0">
+				<tr class="b2">
+					<td class="dv">
+					
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="width: 46%" align="left">
+					
+						<input name="macod" type="text"><select name="trangthai">
+								<option selected="" value="1">&#272;ang chuy&#7875;n</option>
+								<option value="3">&#272;ã thanh toán</option>
+								</select><input name="submit" type="submit" value="Tìm cod" class="go">
+								</td>
+								<td align="right" style="width: 54%">
+								<a title="Thêm code" class="style9" href="aindex.php?act=themcod"  rel="lyteframe" title="Search Google" 
+   rev="width: 400px; height: 300px; scrolling: yes;"><input name="Button1" type="button" value="Thêm cod" class="go"></a>
+								<input onclick="window.location.href='index.php?act=quanlycod&staus=1'" name="Button5" type="button" value="Cod &#272;ang chuy&#7875;n" class="go">
+								<input onclick="window.location.href='index.php?act=quanlycod&staus=2'" name="Button2" type="button" value="Cod L&#432;u ý" class="go">
+								<input onclick="window.location.href='index.php?act=quanlycod&staus=4'" name="Button4" type="button" value="Cod H&#7911;y" class="go">
+								<input onclick="window.location.href='index.php?act=quanlycod&staus=3'" name="Button3" type="button" value="Cod &#273;ã xong" class="go"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>
+<form method="post" name="fr">
+	<table style="width: 100%" cellpadding="0">
+		<tr>
+			
+			<td>
+			<table style="width: 100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+										<img alt="" src="../images/bgd1.gif" /></td>
+					<td class="style18x"><strong>Qu&#7843;n lý cod gửi </strong></td>
+					<td>
+										<img alt="" src="../images/bgd2.gif" /></td>
+				</tr>
+			</table>
+			</td>
+			
+		</tr>
+		<tr style="background-color:#cccccc">
+			<td class="bo2" style="background-color:#EBEBEB;">
+								<table style="width: 100%" cellspacing="1">
+									<tr class="chucam">
+										<td style="width: 3%; height: 22px" class="style10">
+										<strong>STT</strong></td>
+										<td style="width: 10%; height: 22px" class="style10">
+										<strong class="chucam">S&#7889; Sim</strong></td>
+										<td style="width: 8%; height: 22px" class="style10">
+										Giá bán</td>
+										<td style="width: 8%; height: 22px" class="style10">
+										Giá nh&#7853;p</td>
+										<td style="width: 8%; height: 22px" class="style10">
+										Phí chuy&#7875;n</td>
+										<td style="width: 10%; height: 22px" class="style10">
+										Mã b&#432;u ph&#7849;m</td>
+										<td style="width: 8%; height: 22px" class="style10">
+										Mã cod</td>
+										<td style="width: 10%; height: 22px" class="style10">
+										Ngày chuy&#7875;n</td>
+										<td style="width: 8%; height: 22px" class="style10">
+										Tr&#7841;ng thái</td>
+										<td style="width: 15%; height: 22px" class="style10">
+										Hành &#273;&#7897;ng</td>
+									</tr>
+									
+									{section name = d loop =$data}
+									<tr class="{$data[d].class}" id="{$data[d].id}">
+										<td style="width: 3%" class="dv">{$data[d].stt}</td>
+										<td style="width: 10%" class="tampx">
+										{$data[d].sosim}</td>
+										<td style="width: 8%" class="style27">
+										{$data[d].giaban}</td>
+										<td style="width: 8%" class="style27">
+										{$data[d].gianhap}</td>
+										
+										<td style="width: 8%" class="style27">
+										{$data[d].phichuyen}</td>
+										
+										<td style="width: 10%" class="style27">
+										{$data[d].mabuu}</td>
+										
+										<td style="width: 8%" class="style27">
+										{$data[d].macod}</td>
+										
+										<td style="width: 10%" class="style27">
+										{$data[d].ngaychuyen}</td>
+										
+										<td style="width: 8%" class="style27">
+										{$data[d].trangthai}</td>
+										
+										<td style="width: 15%" class="style27">
+										<a class="style9" href="aindex.php?act=suacod&mid={$data[d].id}" rel="lyteframe" title="Sửa code" rev="width: 900px; height: 100px; scrolling: yes;">Sửa</a> / 
+										<a onclick="return conf('{$data[d].sosim}');" href="javascript:Load('aindex.php?act=action&xoacod&{$data[d].id}&{$staus}')">Xóa</a> 
+										/ 
+										<a href="javascript:checkcod('{$data[d].mabuu}');">Check</a></td>
+										
+									</tr>
+									
+									{/section}
+									<tr class="b2">
+										<td class="dv" colspan="10">
+										
+										</td>
+									</tr>
+								</table>
+								</td>
+		</tr>
+	</table>
+	</form>
+</div>
+{$paging}

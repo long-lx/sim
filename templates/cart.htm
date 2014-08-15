@@ -1,0 +1,97 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<title>Ngan Hang Sim So Dep - Sim so dep, Sim Vip, Sim Tu Quy, Sim Taxi, Sim Nam Sinh, Sim Than Tai, Sim Loc Phat, Sim de nho...</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script language="jscript" type="text/javascript" src="ajax.js"></script>
+</head>
+<body style="margin-left: 0px; margin-top: 0px; margin-right:0">
+<form name="fr" method="post">
+<input name="update" value="1" type="hidden" />
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		
+
+		<table border="0" width="100%" cellspacing="1" style="background-color:#C0C0C0">
+		
+			<tr>
+				<td style="background-color:white">
+			
+				<table style="width: 100%; " cellspacing="0" cellpadding="0">
+			
+					<tr>
+						<td style="background-color:white; height: 67px;">
+						
+						<table style="width: 100%" cellspacing="1" cellpadding="0">
+							<tr style="background-color:#EBEBEB">
+								<td style="height: 20px; width: 30%; text-align:center"><strong>Số 
+								sim</strong></td>
+								<td style="width: 40%; height: 20px; text-align:center">
+								<strong>Giá tiền</strong></td>
+								<td style="width: 10%; height: 20px; font-weight: 700; text-align: center;" class="dv">
+								X<span lang="en-us">óa</span></td>
+							</tr>
+							{section name = d loop = $data}
+							<tr>
+								<td style="height: 22px; width: 30%; padding-left:30px;"><strong>{$data[d].sim1}</strong></td>
+								<td style="width: 40%; height: 22px; padding-left:40px;"><strong>{$data[d].giaban} 
+								</strong><sup>(VNĐ)</sup></td>
+								<td style="width: 10%; height: 22px; text-align: center;" class="dvc">
+								
+								
+								<a href="aindex.php?act=cart&amp;del={$data[d].sim2}">
+								
+								
+								<img border="0" alt="Xóa số {$data[d].sim1} khỏi giỏ hàng" src="images/delete.jpg" style="width: 23px; height: 22px"></a>								
+								
+								</td>
+							</tr>
+							{/section}
+							<tr>
+								<td style="height: 22px; width: 30%;" class="dvc">&nbsp;
+								</td>
+								<td style="width: 40%; height: 22px; text-align: center; font-weight: 700;">
+								{if $t ==1}Tổng tiền: {$tongtien}<sup>(VNĐ)</sup>{/if}</td>
+								<td style="width: 10%; height: 22%" class="dvc">&nbsp;
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 18px; width: 30%;" class="dvc">
+								</td>
+								<td style="width: 40%; height:18px; text-align: center; font-weight: 700;">
+								</td>
+								<td style="width: 10%; height: 18px" class="dvc">
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 22px; " colspan="3" align="center">
+								
+								<table style="width: 60%">
+									<tr>
+										<td style="width: 10%; text-align: center;">
+										{if $d !=1}&nbsp;
+&nbsp;<a target="_parent" href="dat-mua-sim-{$simx}cid0.html"><img border="0" alt="Đặt mua sim" src="images/datmua.jpg" style="width: 83px; height: 35px"></a>
+									{/if}
+										</td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+							</table>
+</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

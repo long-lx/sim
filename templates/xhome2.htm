@@ -1,0 +1,80 @@
+﻿<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+								<table style="width: 100%; height: 100%" cellspacing="0" cellpadding="0">
+									<tr>
+										<td>
+										<img src="http://nganhangsimsodep.com/images/ms1.gif" style="width: 17px; height: 25px" /></td>
+										<td class="mainbg" style="color: #FFFFFF; background-image: url('http://nganhangsimsodep.com/images/ms2.gif'); text-align: left;">
+										<b>{$muc}</b></td>
+										<td>
+										<img src="http://nganhangsimsodep.com/images/ms3.gif" style="width: 18px; height: 25px" /></td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+							{if $loaisim ==1} 
+							<tr>
+							<td>
+							<table style="width: 100%" class="bo2">
+							{section name=l loop = $vloai}
+							{if $l[l] ==0}
+								<tr>
+								{/if}
+									<td style="text-align: center">
+									<a title="Sim Số Đẹp - {$vloai[l]}" class="style9" href="{$vlink[l]}"><span style="font-size:11px;font-family:Arial, Helvetica, sans-serif">{$vloai[l]}</span></a></td>
+								{if $l[l] ==3}
+								</tr>
+								{/if}
+							{/section}
+							</table>
+							</td>
+							</tr>
+							{/if}
+							<tr style="background-color:#EBEBEB">
+								<td style="border: 1px #ccccff solid">
+								<table style="width: 100%" cellspacing="1">
+									<tr class="chucam">
+										<td style="width: 7%; height: 22px" class="style10">
+										<strong>STT</strong></td>
+										<td style="width: 20%; height: 22px" class="style10">
+										<strong class="chucam">Số Sim</strong></td>
+										<td style="width: 20%; height: 22px" class="style10">
+										<strong class="chucam">Giá Tiền</strong></td>
+										<td style="width: 20%; height: 22px" class="style10">
+										<strong class="chucam">Mạng</strong></td>
+										<td style="width: 15%; height: 22px" class="style10">
+										<strong class="chucam">Đặt Mua</strong></td>
+									</tr>
+									{section name = d loop = $data}
+									<tr class="{$data[d].class}">
+										<td style="width: 7%" class="dv">{$data[d].stt}</td>
+										<td style="width: 20%" class="tampx">
+										<strong>
+										<a href="http://nganhangsimsodep.com/dat-mua-sim-so-dep-{$data[d].sim2}.html"><span style="color:#333333">{$data[d].sim1}</span></a></strong></td>
+										<td style="width: 20%" class="tampx">
+										{$data[d].giaban}</td>
+										<td style="width: 20%" class="dv">
+										<strong>{$data[d].mang}</strong></td>
+										<td style="width: 15%" class="dv">
+										
+										<a class="ovalbutton" href="http://nganhangsimsodep.com/dat-mua-sim-so-dep-{$data[d].sim2}.html" rel="nofollow"><img border="0" src="images/datmua2.gif" width="67" height="25"></a>
+										</td>
+									</tr>
+									{/section}
+									{if $dem ==1}
+									{/if}
+									<tr class="b2">
+										<td class="dvc" colspan="5" align="center">
+										<div align="center">
+										{$paging}
+										</div>
+										</td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+							<tr>
+							<td style="height: 8px; background-image: url('http://nganhangsimsodep.com/images/bgms.gif')"></td>
+							</tr>
+						</table>

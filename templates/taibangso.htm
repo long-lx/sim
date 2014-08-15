@@ -1,0 +1,96 @@
+﻿<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+
+		<a>Tải báo giá</a> </li>
+
+	</ul>
+
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+
+								<form name="form_id" method="POST" action="download.php" onsubmit="return checktai();">
+
+								
+
+									<div class="dv">
+
+<table style="width: 100%" cellspacing="1" class="bgmo">
+
+	<tr>
+
+		<td class="nentrang" align="left" colspan="3" style="height: 22px">
+
+		<input onclick="((this.checked) ? select_all('c','1') : select_all('c','0'));" name="a" type="checkbox" style="height: 20px" value="0"> 
+
+		{$tmenu} <input name="sloai" value="{$gloai}" type="hidden"> </td>
+
+	</tr>
+
+
+
+{section name = d loop =$vlink}
+
+	{if $l[d] == 0}
+
+	<tr>
+
+	{/if}
+
+		<td class="nentrang" align="left" style="height: 22px">
+
+		<input name="c[]" value="{$vlink[d]}" type="checkbox" style="width: 20px" checked="checked">{$vloai[d]}</td>
+
+	{if $l[d] == 3}
+
+	</tr>
+
+	{/if}
+
+{/section}
+
+	<tr>
+
+		<td class="nentrang" align="center" colspan="3" style="height: 22px">
+
+		Giá từ:
+
+		<input onkeyup="executeComma(event,document.form_id.gia1)" name="gia1" type="text" style="width: 81px" value="100.000" id="gia1">&nbsp; Đến:
+
+		<input onkeyup="executeComma(event,document.form_id.gia2)" name="gia2" type="text" style="width: 81px" value="20.000.000" id="gia2"></td>
+
+	</tr>
+
+	<tr>
+
+		<td class="nentrang" align="center" colspan="3" style="height: 22px">
+
+		Định dạng file:
+
+		<input name="r" type="radio" value="1" checked="checked">Excell (.xls)&nbsp;
+
+		<input name="r" type="radio" value="2">Word (.doc)&nbsp;
+
+		<input name="r" type="radio" value="3" style="height: 20px">Website 
+
+		(.html) 
+
+		</td>
+
+	</tr>
+
+	<tr>
+
+		<td class="nentrang" align="center" colspan="3" style="height: 22px">
+
+		<input name="submit" type="submit" value="Tải xuống bảng giá" class="sub">&nbsp;</td>
+
+	</tr>
+
+	</table>
+
+</div>	
+
+</div>
+</form>

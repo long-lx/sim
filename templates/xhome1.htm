@@ -1,0 +1,200 @@
+﻿
+<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+								<table style="width: 100%" cellspacing="0" cellpadding="0">
+								<tr>
+								<td style="height:5px" colspan="3" class="style8"></td>
+								</tr>
+									<tr>
+										<td style="height: 1px; width: 1px">
+										<img src="http://nganhangsimsodep.com/images/ks1.gif" style="width: 8px; height: 25px"></td>
+										<td style="background-image: url('http://nganhangsimsodep.com/images/ks2.gif'); height: 1px; width: 100%; color: #FFFFFF; text-align: left;">
+										<strong>TÌM KIẾM SIM SỐ ĐẸP</strong></td>
+										<td style="height: 1px">
+										<img src="http://nganhangsimsodep.com/images/ks3.gif" style="width: 8px; height: 25px"></td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3" style="border:1px #cc9966 solid">
+								<form name="timkiemsim" method="GET" action="http://nganhangsimsodep.com/index.php" onsubmit="return checksearch()">
+								<input name="act" value="search" type="hidden">
+									<div class="dv">
+<fieldset name="Group1">
+									<legend></legend>
+										
+										<table style="width: 100%" cellspacing="0" cellpadding="0">
+											<tbody style="text-align: left; word-spacing: 2px; line-height: 150%;">
+											<tr>
+												<td style="height: 26px" valign="middle">
+												<div id="soption2" style="display:none; text-align: center;">
+												<br>
+												<select name="smang" style="width: 93px">
+												<option selected="" value="0">Các mạng</option>
+												{section name = d loop =$tenmang}
+												<option value="{$tenmang[d]}"> - {$tenmang[d]}</option>
+												{/section}
+												</select> 
+										 <strong>
+										<span class="style12">
+												&nbsp;Giá từ: </span>
+												&nbsp;</strong><input onkeyup="executeComma(event,document.timkiemsim.sgiatu)" onclick="this.value='';this.className='vienxanh'" name="sgiatu" type="text" style="width: 61px" id="g1" /><span class="style12"><strong>&nbsp; Đến:&nbsp; </strong></span>
+												<input onkeyup="executeComma(event,document.timkiemsim.sgiaden)" onclick="this.value='';this.className='vienxanh'" name="sgiaden" type="text" style="width: 62px" id="g2" />
+												<strong>Tổng nút/điểm:</strong>
+												
+												<select name="tongnut" style="width: 46px">
+												<option selected="" value="11">Tất</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="0">10</option>
+												</select><br>
+												Dãy số không bao gồm:
+												<input name="n[]" type="checkbox" value="1">1<input name="n[]" type="checkbox" value="2">2<input name="n[]" type="checkbox" value="3">3<input name="n[]" type="checkbox" value="4">4<input name="n[]" type="checkbox" value="5">5<input name="n[]" type="checkbox" value="6">6<input name="n[]" type="checkbox" value="7">7<input name="n[]" type="checkbox" value="8">8<input name="n[]" type="checkbox" value="9">9</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="height: 11px;" align="center">
+												
+												<table style="width: 306px" cellspacing="0" cellpadding="0">
+													<tr>
+														<td style="height: 26px; width: 282px;">
+														<table style="width: 70%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td>
+														<input onkeyup="checkmobis(this);" onclick="this.className='vienxanh'; this.value='';" name="Textsim" type="text" value="{$thiskey}" style="width: 277px; height:21px; color:#999999" id="csearch" /></td>
+															</tr>
+															<tr>
+																<td style="background-image: url('http://nganhangsimsodep.com/images/bgt.gif'); height:5px; ">
+																</td>
+															</tr>
+														</table>
+														</td>
+														<td style="height: 26px">
+														<input style="border:0px" name="submit" type="image" src="images/timkiem2.jpg" /></td>
+													</tr>
+												</table>
+												</td>
+											</tr>
+										
+											<tr>
+												<td class="style22" style="height: 19px; text-align: center;">
+												<span class="style21">VD: 
+												</span> 
+												<a onclick="document.timkiemsim.Textsim.value='*1986'" href="javascript:void(0)" rel="nofollow">
+												<span class="style24">*</span><span class="style21">1986</span></a><span class="style21">, 
+												</span> <a onclick="document.timkiemsim.Textsim.value='09*6868'" href="javascript:void(0)" rel="nofollow">
+												<span class="style21">09*6868</span></a><span class="style21">, 
+												</span> <a onclick="document.timkiemsim.Textsim.value='0913*'" href="javascript:void(0)" rel="nofollow">
+												<span class="style21">0913*</span></a>, 
+												<a onclick="document.timkiemsim.Textsim.value='01234*'" href="javascript:void(0)" rel="nofollow"><span class="style21">01234*</span></a>, <a onclick="document.timkiemsim.Textsim.value='091xxxx678'" href="javascript:void(0)" rel="nofollow"><span class="style21">091xxxx678</span></a>, <a onclick="document.timkiemsim.Textsim.value='09*99x99'" href="javascript:void(0)" rel="nofollow"><span class="style21">09*99x99</span></a>&nbsp; <span id="tnc"><a href="javascript:void(0)" rel="nofollow" onclick="oshow();">Tìm 
+												Kiếm Nâng Cao</a></span><span id="tbt" style="display:none"><a href="javascript:void(0)" rel="nofollow" onclick="ohide();"><strong>Tìm kiếm nhanh</strong></a></span></td>
+											</tr>
+										
+											<tr>
+												<td class="style22" style="height: 19px; text-align: center;">
+												<div id="soption" style="display:none">
+												<br>
+												<table style="width: 100%">
+													<tr>
+														<td>
+														<div align="center">
+														<table style="width: 90%; background-color: #F9F9F9;" cellspacing="0" cellpadding="0">
+															<tr>
+																<td style="border-style: solid; border-color: #F5F5F5">
+																<p style="word-spacing: 2px; line-height: 150%; text-align: left; margin-top: 2px; margin-bottom: 2px">
+																<span style="color: #333333">
+																<strong>Hướng dẫn 
+																kiếm nâng cao:</strong><br>
+																Để tìm sim đuôi 
+																tận cùng là 888 
+																nhập *888<br>
+																Để tìm đầu số 
+																0169 và đuôi là 
+																888 nhập 
+																0169*888<br>
+																Để tìm sim bắt 
+																đầu 09132 nhập 
+																09132*<br>
+&nbsp;+ Sử dụng dấu &quot;</span><span style="color: #FF0000">x</span><span style="color: #333333">&quot; đại điện cho 1 số và dấu &quot;</span><span style="color: #FF0000">*</span><span style="color: #333333">&quot; đại điện cho một chuỗi số.<br>
+&nbsp; - Nếu tìm dạng 0912a33b44 nhập 0912x33x44<br>
+&nbsp; - Nếu tìm dạng&nbsp; 09aa2b2c2d nhập 09*2x2x2x</span><br>
+															<a title="Hướng dẫn tìm kiếm sim" class="example5" href="http://nganhangsimsodep.com/aindex.php?act=NHsimsodep&cid=huongdantimsim" rel="example3">	Tìm hiểu thêm...</a></p>
+																</td>
+															</tr>
+														</table>
+														</div></td>
+													</tr>
+												</table>
+												</div>
+												</td>
+											</tr>
+										</table>
+										
+										</fieldset></div>
+								</form>
+									<img alt="sim so dep, theo dau so" src="images/simsodep-dauso.gif" width="217" height="22" style="float: left"><table style="width: 100%; " cellspacing="0" cellpadding="0">
+										<tr>
+											<td class="dv" style="height: 48px">
+											<select name="sx" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';">
+											<option>Vinaphone</option>
+											{section name = d loop = $dauvina}
+											<option value="{$dauvina[d]}">- {$dauvina[d]} -</option>
+											{/section}
+											</select></td>
+											<td class="dv" style="height: 48px">
+											<select name="sv"  onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';">
+											
+											<option>Mobifone</option>
+											{section name = d loop = $daumobi}
+											<option value="{$daumobi[d]}">- {$daumobi[d]} -</option>
+											{/section}
+											</select></td>
+											<td class="dv" style="height: 48px">
+											<select name="sa" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';">
+											<option>Viettel</option>
+											{section name = d loop = $dauviettel}
+											<option value="{$dauviettel[d]}">- {$dauviettel[d]} -</option>
+											{/section}
+
+											</select></td>
+											<td class="dv" style="height: 48px">
+											<select name="sa0" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';">
+											<option>VietNamobile</option>
+											{section name = d loop = $dauVietNamobile}
+											<option value="{$dauVietNamobile[d]}">- {$dauVietNamobile[d]} -</option>
+											{/section}
+
+											</select></td>
+											<td class="dv" style="height: 48px">
+											<select name="sa1" onchange="window.location.href='dau-so-'+this.options[selectedIndex].value+'.html';" style="height: 22px">
+											<option>Beeline</option>
+											{section name = d loop = $dauBeeline}
+											<option value="{$dauBeeline[d]}">- {$dauBeeline[d]} -</option>
+											{/section}
+
+											</select></td>
+										</tr>
+									</table>
+								
+								</td>
+							</tr>
+							<tr>
+							<td style="height: 8px; background-image: url('http://nganhangsimsodep.com/images/bgms.gif')">
+							</td>
+							</tr>
+							</table>
+							<a name="c"></a>
+							
+
+							<div id="main">
+							
+							</div>

@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+<script type="text/javascript">
+function hget(sosim,mobile,type)
+{
+	$('#load').html('<img src="loading.gif">');
+	$('#load').load('aindex.php?act=check&so='+sosim+'&dlso='+mobile+'&type='+type);
+}
+function hsend(to,msg)
+{
+	msg=msg.replace(/&/i,' ');
+	msg=msg+' '+document.sms.sendby.value+'';
+	if(document.sms.msg.value.length > 100)
+	{
+	alert('Tin nhắn quá dài! Vui Lòng xóa bớt');
+	return fasle;
+	}
+	$('#load').html('<img src="loading.gif">');
+	$.ajax({
+	type: 'POST',
+	data:'to='+to+'&msg='+msg+'&sendby='+document.sms.sendby.value+'',
+	url: 'aindex.php?act=check&so=11111111',
+	success:function(data){
+	$('#load').html(data);
+	}
+	});
+}
+function smsleng()
+{
+ document.sms.leng.value=100-document.sms.msg.value.length;
+}
+</script>
+<table style="width: 100%" bgcolor="#CCCCCC">
+	<tr>
+		<td style="text-align: center">
+		<form method="post">
+			<br />
+			<div id="thongbao">
+			</div>
+			<div id="load">
+			</div>
+			<br />
+			<span style="color: #FF0000; font-weight:bold; font-size:18px;"><strong>&nbsp;{$thongbao}</strong></span><br /></br>
+			<input name="submit" type="button" value="Nhập số" class="go" style="height: 40px" /><input name="sosim" style="width: 183px; height: 32px" value="{$sim2}" /><input name="submit" type="submit" value="Check" class="go" style="height: 40px" /><br />
+			{if $giaban > 0}
+			<br />
+			<!--<strong>{$hovaten} - 
+			{$city}<br />
+			</strong><br />-->
+			
+			&nbsp;<!--<input onclick="hget('{$sim2}','{$mobile}','giu');" name="giu" type="button" value="Báo giữ" class="go" />
+			<input onclick="hget('{$sim2}','{$mobile}','kiemtra');" name="kiemtra" type="button" value="Kiểm Tra" class="go" />--><br /></br>
+			<span style="color:#FF0000; font-size:20px; font-weight:bold;" onclick="$('#show').show('fast');" href="javascript:voiid(0)">THÔNG TIN VỀ SIM BẠN ĐÃ KIỂM TRA</span><br />
+<center>
+			{/if}
+			<br />
+		<table onclick="$('#show').show('fast');" href="javascript:voiid(0)" style="border:1px solid #999;text-align:left;margin-left:10px;background:#fff;font-weight:bold" cellpadding="0" cellspacing="0">
+			<tbody><tr style="height:30px">
+			<td colspan="2" style="text-align:center;background:#16b;color:#fff">THÔNG TIN CHECK SIM</td>
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Số SIM</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999"> 	{$sim2}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Giá khách</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999;color:#f00">{$giaban *1000000}&nbsp;<font color="#000000">VNĐ</font></td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Giá gốc</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999;color:#f00">{($giaban *1000000) - ($giaban *1000000) * $pt/100}&nbsp;<font color="#000000">VNĐ</font></td>			
+			</tr>
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Lãi được</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999;color:#f00">{($giaban *1000000) * $pt/100}&nbsp;<font color="#000000">VNĐ</font></td>			
+			</tr>
+			
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Hoa hồng</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999; color:#f00">{$pt}&nbsp;<font color="#000000">%</font></td>			
+			</tr>			
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Đại lý</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$hovaten}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Địa chỉ</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$diachi}</td>			
+			</tr>	
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Hotline</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$mobile}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Email</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$email}</td>			
+			</tr>
+			<tr style="height:30px">
+			<td style="padding:0px 10px;width:60px;border-bottom:1px solid #999;border-right:1px solid #999">Website</td>
+			<td style="padding:0px 10px;border-bottom:1px solid #999">{$website}</td>			
+			</tr>				
+	</tbody></table>
+<!--<table border="1" cellpadding="5" cellpadding="5" width="1000">		
+   <tr style="background:#FFFFFF; font-size:20px; font-weight:bold; text-align:center;">
+   	<td>Số sim</td>
+	<td>Hoa hồng</td>
+	<td>Giá bán</td>
+	<td>Giá nhập</td>
+	<td>Được lãi</td>
+    <td>Đại lý</td>
+    <td>Địa chỉ</td>
+    <td>Mobile</td>
+    <td>Email</td>
+    <td>Website</td>
+    <td>Thành phố</td>
+  </tr>
+  
+  <tr style="background:#FFFFFF; color:#FF0000; font-size:18px; font-weight:bold; text-align:center;">
+    <td>{$sim2}</td>
+	<td>{$pt}&nbsp;%</td>
+	<td>{$giaban *1000000}&nbsp;VNĐ</td>
+	<td>{($giaban *1000000) - ($giaban *1000000) * $pt/100}&nbsp;VNĐ</td>
+	<td>{($giaban *1000000) * $pt/100}&nbsp;VNĐ</td>
+	<td>{$hovaten}</td>
+    <td>{$diachi}</td>
+    <td>{$mobile}</td>
+    <td>{$email}</td>
+    <td>{$website}</td>
+    <td>{$city}</td>
+  </tr>
+
+<!--			Đại lý: {$hovaten} <br />
+			Địa chỉ: {$diachi} <br />
+			Mobile: {$mobile} <br />
+			Email : {$email}<br/>
+			Website: {$website}<br/>
+			Thành phố: {$city}<br/>-->
+<!--<table>-->
+			
+			<br />
+			<br />
+			<br />
+		</form>
+	</td>
+	</tr>
+</table>
+</center>
+<form method="post" name="sms">
+
+<table style="width: 100%">
+<tr>
+<td align="center">
+<!--<table style="width: 400px">
+		<tr>
+			<td style="text-align: left; " valign="top">
+			
+				
+			<strong>To:</strong><input name="to" type="text" /><strong><br />
+&nbsp;<a onclick="$('#danhba').show('show');" href="javascript:void(0)">Danh bạ</a></strong><br />
+			<br />
+			<textarea onkeyup="smsleng()" name="msg" cols="20" style="height: 87px"></textarea><br />
+			<input name="sendby" onclick="this.value=''" type="text" value="{$sendby}">
+			<input onclick="hsend(document.sms.to.value,document.sms.msg.value)" class="go" name="sms" type="button" value="SEND SMS" /><input name="leng" type="text" style="width: 25px" /></td>
+			<td style="text-align: left; ">
+			
+				
+			<table style="width: 100%;display:none" id="danhba">
+			{section name=d loop = $danhba}
+				<tr>
+					<td onclick="document.sms.to.value='{$danhba[d].mobile}'"> <input name="Radio1" type="radio" />{$danhba[d].hovaten} ({$danhba[d].mobile})</td>
+				</tr>
+			{/section}
+			</table>
+			</td>
+		</tr>
+		</table>-->
+	</td>
+	</tr>
+</table>	
+	
+	
+	</form>
+
+</body>
+
+</html>

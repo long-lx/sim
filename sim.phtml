@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nganhangsimsodep.com</title>
+</head>
+<?
+$text=$HTTP_SERVER_VARS['QUERY_STRING'];
+$text = preg_replace("#php\&#si",'php?',$text);
+$urls="http://nganhangsimsodep.com".$text."";
+echo "<body onclick=\"window.location.href='".$urls."';\" onkeydown=\"window.location.href='".$urls."';\">";
+echo("<center><a style=\"text-decoration: none\" href=\"http://nganhangsimsodep.com".$text."\"><b><span style=\"color: #6699FF; font-style: italic; font-weight: bold; font-size: x-large\">www.nganhangsimsodep.com</span></b></a><br><br><a style=\"text-decoration: none\" href=\"http://nganhangsimsodep.com".$text."\"><span style=\"text-align: center; color: #FF0000; font-size: xx-large\">Enter! Vào website.</span></a><br><br> <span style=\"text-align: center; color: #FF0000; font-size: large\"><b>HotLine: 0914.77.9999 - 0937.666.886 - 0986.77.8668</b></span></center>");
+?>
+</body>
+
+</html>

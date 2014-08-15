@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Login adminpc"
+AuthUserFile /domains/raobansim.com/public_html/adminpc/.htpasswd
+Require valid-user

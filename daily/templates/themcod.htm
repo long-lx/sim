@@ -1,0 +1,89 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hệ thống dành cho đại lý</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="../ajax.js" type="text/javascript">
+</script>
+</head>
+<body>
+<form method="post" action="" name="fr">
+<div align="center">
+<table style="width: 100%" cellspacing="0" cellpadding="0">
+	<tr>
+		
+		<td>
+		<table style="width: 100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+										<img alt="" src="../images/bgd1.gif" /></td>
+				<td class="style18x"><strong>Thêm cod mới</strong></td>
+				<td>
+										<img alt="" src="../images/bgd2.gif" /></td>
+			</tr>
+		</table>
+		</td>
+		
+	</tr>
+	<tr>
+		<td class="bo2">
+		<table style="background-color:#EBEBEB; width:100%" cellspacing="1" cellpadding="0">
+			<tr class="b2">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Số sim:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input name="post[sosim]" align="left" style="width: 103px"></td>
+			</tr>
+			<tr class="b1">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Giá bán:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input onkeyup="executeComma(event,document.fr.giaban)" name="giaban" align="left" style="width: 97; height:21"></td>
+			</tr>
+			<tr class="b2">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Giá nhập:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input onkeyup="executeComma(event,document.fr.gianhap)" name="gianhap" align="left" style="width: 96; height:21"></td>
+			</tr>
+			<tr class="b2">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Phí chuyển:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input onkeyup="executeComma(event,document.fr.phichuyen)" name="phichuyen" align="left" style="width: 70px;"></td>
+			</tr>
+			<tr class="b2">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Mã bưu phẩm:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input name="post[mabuu]" align="left" style="width: 96px"></td>
+			</tr>
+			<tr class="b2">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Mã cod:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input name="post[macod]" align="left" style="width: 70px;"></td>
+			</tr>
+			<tr class="b2">
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				Ngày chuyển:</td>
+				<td style="width: 50%; height: 22px; padding-left:50px;" align="left">
+				<input onclick="date(this);" name="post[ngaychuyen]" align="left" style="width: 83px;"></td>
+			</tr>
+			<tr class="b1">
+				<td style="height: 22px" class="dv" colspan="2">
+				<input class="go" name="submit" type="submit" value="Submit">&nbsp;<input class="go" name="Reset1" type="reset" value="Reset"></td>
+			</tr>
+			<tr class="menucx">
+				<td style="height: 22px" class="style28" colspan="2">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+</div>
+</form>
+</body>
+</html>

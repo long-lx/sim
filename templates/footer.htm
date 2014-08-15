@@ -1,0 +1,119 @@
+﻿</div>
+
+</td>
+
+<td valign="top">
+
+<div class="benphai"><div class="menucontent"><h2>Hỗ trợ mua sim</h2><div class="bannerx">
+
+				{$p_hotline}</div></div>		<div class="cartcontent" id="cartcontent">
+
+			<h2>Sim đẹp mới về</h2>
+
+			<marquee direction="down" behavior="SCROLL" scrolldelay="1" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();" style="overflow: hide" height="168">
+
+				<table id="slidee" style="border-collapse: collapse; background: none repeat scroll 0% 0% rgb(255, 255, 255);" width="100%" border="1" bordercolor="#C0C0C0" cellpadding="5">
+
+<tbody>				{section name=s loop=$simmoi}
+
+					<tr>
+
+						<td align="center"><b>{$simmoi[s].sosim}</b><br>
+
+						<a href="dat-mua-sim-so-dep-{$simmoi[s].sosim}.html" title="Mua sim này">{$simmoi[s].giatien}<sup>vnd</sup></a></td>
+
+					</tr>
+
+					{/section}
+
+					</tbody></table></marquee>
+
+		</div>
+
+		<div class="menucontent"><h2>Tải báo giá</h2><div class="bannerx"><div style="background: #FFFFFF; padding: 5px;">
+
+<form method="post" action="sim-so-dep-taibangso.htm" onsubmit="return false">
+
+
+
+			<br />
+
+
+
+			<select name="Select1" style="width: 85%" onchange="window.location.href='taibangso-'+this.options[selectedIndex].value+'.html';">
+
+
+
+			<option selected="selected" value="0">Chọn thể loại</option>
+
+
+
+			{section name=k loop=$linkf}
+
+
+
+			<option value="{$linkf[k]}">- {$linknamef[k]}</option>
+
+
+
+			{/section}</select><button class="sub">Tải báo giá</button><br />
+
+
+
+		</form>
+
+
+
+</div></div></div>
+
+		
+
+		<div class="menucontent"><h2>Tài khoản ngân hàng</h2><div class="bannerx"><div style="background: #FFFFFF; padding: 5px;">
+
+{$p_taikhoan}
+
+</div></div></div><div class="menucontent"><h2>Quảng cáo</h2><div class="bannerx">			
+
+	{$p_quangcao}
+
+	</div></div></div>
+
+	</td>
+
+	</tr>
+
+</table>
+
+			<div style="clear:both"> </div>
+
+	
+
+	</div>
+
+	<div style="clear:both"> </div>
+
+	<div class="footer">
+
+				<div class="menubottom">
+
+							</div>
+
+		
+
+			<div class="footercontent"><div class="footercontent">
+
+{$p_banquyen}
+
+</div></div>
+
+	</div>
+
+
+
+</div>
+
+</center>
+
+<span style="padding-left:80px; display:none;">Design By: <a target="_blank" href="http://www.stv.vn">www.stv.vn</a></span>
+
+</body></html>

@@ -1,0 +1,36 @@
+﻿<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" style="margin-top:-18px;">
+
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		<li class="">
+
+		<a>Hỗ trợ hỏi đáp</a></li>
+
+	</ul>
+
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="text-align: center">
+
+
+<form method="post" action="ho-tro-khach-hang.support">
+	<input onclick="this.value=''" name="search" type="text" value="Câu hỏi" style="width: 196px; height: 25px"> <input name="submit" type="submit" value="Tìm câu trả lời" class="sub"></form>
+
+<div style="text-align: left">
+<p style="margin-left: 20px">{$noidung}
+</p>
+<hr style="height: 1px">
+</div>
+<table style="width: 100%" cellspacing="0">
+{section name=d loop=$data}
+	<tr class="{$data[d].class}">
+		<td style="text-align: left">
+		<ul style="margin:0px">
+			<li style="height:20px"><a href="ho-tro-khach-hang.support{$data[d].id}">{$data[d].ptitle}</a></li>
+		</ul>
+		</td>
+	</tr>
+{/section}
+</table>
+
+</div>
+
+</div>

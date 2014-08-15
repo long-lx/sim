@@ -1,0 +1,14 @@
+# Contact info submission
+
+url: nganhangsimsodep.com/
+site_owner: http://nganhangsimsodep.com
+address1: http://www.nganhangsimsodep.com
+address2: http://nganhangsimsodep.vn
+city: Ha Noi
+state: Na
+country: VietNam
+postal_code: 00084
+phone_number:  84014779999
+display_email: nganhangsimsodep.com@gmail.com
+site_name: Ngân Hàng Sim Số Đẹp - Sim số đẹp, Sim Vip, Sim Tứ Quý, Sim Taxi, Sim Năm Sinh, Sim Thần Tài, Sim Lộc Phát, Sim dễ nhớ...
+site_description: Ngân Hàng Sim Số Đẹp - Sim số đẹp, Sim Vip, Sim Tứ Quý, Sim Taxi, Sim Năm Sinh, Sim Thần Tài, Sim Lộc Phát, Sim dễ nhớ...

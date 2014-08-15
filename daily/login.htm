@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+
+<meta http-equiv="Content-Language" content="en-us" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link type="text/css" href="http://muabansimdep.vn/css/jquery-ui-1.8.13.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="http://muabansimdep.vn/js/jquery-1.5.1.min.js"></script>
+
+<script type="text/javascript" src="http://muabansimdep.vn/js/jquery-ui-1.8.13.custom.min.js"></script><script type="text/javascript"  language="javascript" src="admin.js" ></script>
+
+
+<title>Đăng Nhập Hệ Thống</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<style type="text/css">
+
+body
+
+{
+
+	margin: 0px;
+
+}
+
+td{
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+}
+
+.menu
+
+{
+
+	height: 22px;
+
+	background-color: #FFFFFF;
+
+	border-right: 1px solid white;
+
+	width: 80px;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	background-image: url('../images/gb0.gif');
+
+	color: #FFFFFF;
+
+}
+
+.menucx
+
+{
+
+	height: 22px;
+
+	background-color: #bcbec0;
+
+	border-right: solid 0.5px white;
+
+	width: 80px;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	background-image: url('../images/bgtrangden.gif');
+
+	color: #333333;
+
+}
+
+.menuxc
+
+{
+
+	height: 22px;
+
+	background-color: #00FF00;
+
+	border-right: solid 0.5px white;
+
+	width: 80px;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	background-image: url('../images/gbdentrang.gif');
+
+	color: #333333;
+
+}
+
+
+
+.menuk
+
+{
+
+	height: 22px;
+
+	background-color: #e5e5e5;
+
+	border-right: solid 0.5px white;
+
+	width: 80px;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	background-image: url('../images/mlk.gif');
+
+}
+
+.bo
+
+{
+
+	border: 1px solid #666666;
+
+	background-color: #FFFFFF;
+
+}
+
+.bo2
+
+{
+
+	border-style: solid;
+
+	border-width: 0px 1px 1px 1px;
+
+	border-color: #999999;
+
+}
+
+.do
+
+{
+
+	background-color: red;
+
+}
+
+.den
+
+{
+
+	background-color: #4d4949;
+
+	height: 2px;
+
+}
+
+.s11
+
+{
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 11px;
+
+}
+
+.mn1 {
+
+	background-color: #BCBEC0;
+
+	height: 22px;
+
+	color: #FFFFFF;
+
+	font-weight: bold;
+
+	font-size: 12px;
+
+	text-indent: 7px;
+
+	background-image: url('../images/gb0.gif');
+
+	text-align: left;
+
+}
+
+.mn2 {
+
+	background-color: #999999;
+
+}
+
+a
+
+{
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	text-decoration: none;
+
+}
+
+a:hover
+
+{
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	text-decoration: underline;
+
+	color: #000000;
+
+}
+
+ul
+
+{
+
+	margin-left: 5px;
+
+}
+
+fieldset
+
+{
+
+	border: 1px solid #FFCA61;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+legend
+
+{
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	color: #333333;
+
+}
+
+.thongke {
+
+	border-style: solid;
+
+	border-width: 0px 1px 1px 1px;
+
+	border-color: #999999;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	height: 22px;
+
+	left: 5px;
+
+	padding-left: 8px;
+
+}
+
+.dv {
+
+	text-align: center;
+
+}
+
+.mainbg {
+
+	background-image: url('../images/gb0.gif');
+
+	width: 100%;
+
+}
+
+.go {
+
+	background-image: url('../images/go.gif');
+
+	background-repeat: repeat-y;
+
+	border-style: solid;
+
+	border-width: 0px;
+
+	height: 22px;
+
+	font-family: Tahoma;
+
+	font-size: 12px;
+
+	font-weight: bolder;
+
+	color: #FFFFFF;
+
+	background-position: left center;
+
+	list-style-position: inherit;
+
+	text-align: center;
+
+	letter-spacing: normal;
+
+}
+
+.h22 {
+
+	height: 22px;
+
+}
+
+.vuong {
+
+	padding: 7px 0px 0px 4px;
+
+}
+
+.b1 {
+
+	background-color: #FFFFFF;
+
+	height: 22px;
+
+	padding-left: 5px;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bolder;
+
+	color: #333333;
+
+}
+
+.tampx {
+
+	padding-left: 8px;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+}
+
+.bo3 {
+
+	border-color: #999999;
+
+	background-image: none;
+
+	border-style: solid;
+
+	border-width: 0px 1px 1px 0px;
+
+	background-color: #FFFFFF;
+
+}
+
+.bo4 {
+
+	border-color: #999999;
+
+	background-image: none;
+
+	border-style: solid;
+
+	border-width: 0px 0px 1px 1px;
+
+	background-color: #FFFFFF;
+
+}
+
+
+
+.chumo {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	color: #666666;
+
+}
+
+.vienxanh {
+
+	border: 2px solid #0099FF;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	color: #FF0000;
+
+	font-weight: bold;
+
+}
+
+.cam {
+
+	background-color: #ff9900;
+
+}
+
+.bgc {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	background-image: url('../images/bgcam.gif');
+
+	height: 22px;
+
+	padding-left: 10px;
+
+}
+
+.chucam {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	color: #FF9B05;
+
+}
+
+.i {
+
+	border: 1px solid #333333;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	vertical-align: middle;
+
+	background-color: #C4C4C5;
+
+	width: 22px;
+
+	height: 14px;
+
+	line-height: normal;
+
+}
+
+.i2 {
+
+	border: 1px solid #333333;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	vertical-align: baseline;
+
+	background-color: #FFA00C;
+
+	width: 22px;
+
+	height: 14px;
+
+	color: #000000;
+
+}
+
+.next {
+
+	border: 1px solid #333333;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	text-align: center;
+
+	vertical-align: baseline;
+
+	background-color: #FFA00C;
+
+	width: 40px;
+
+	height: 14px;
+
+	color: #000000;
+
+}
+
+.b2 {
+
+	background-color: #F3F3F4;
+
+	height: 22px;
+
+	padding-left: 5px;
+
+	background-image: url('images/tbs.gif');
+
+}
+
+.chudo {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	color: #FF0000;
+
+}
+
+
+
+select {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	height: 22px;
+
+	color: #333333;
+
+}
+
+
+
+.lineden {
+
+	background-color: #999999;
+
+}
+
+.bgx0 {
+
+	background-image: url('images/bgx0.gif');
+
+	width: 100%;
+
+}
+
+
+
+}
+
+</style>
+
+</head>
+
+
+
+<body onload="forms[0].y.value='';forms[0].x.value='';">
+
+
+
+<form action="logincheck.php" method="post">
+
+
+<div align="center">
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" style="width:200px;">
+
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+
+		<a>Đăng Nhập</a></li>
+
+	</ul>
+
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+
+<table style="width: 100%" cellspacing="0" cellpadding="0">
+
+	<tr>
+
+		<td align="center">
+
+		<table style="width: 100%" cellspacing="0" cellpadding="0">
+
+			<tr>
+
+				<td align="center">
+
+				<br />
+
+				<table cellspacing="1">
+
+				
+
+					<tr class="ui-widget-content">
+
+						<td style="width: 50px"><span>Username:</span></td>
+
+						<td style="width: 50px">
+
+						<input style="width:100px" name="username" type="text" /></td>
+
+					</tr>
+
+					<tr>
+
+						<td style="width: 50px"><span>Password:</span></td>
+
+						<td style="width: 50px">
+
+						<input style="width:100px" name="password" type="password" /></td>
+
+					</tr>
+
+					<tr class="ui-widget-content">
+
+						<td colspan="2">
+
+						
+
+							<input name="submit" type="submit" value="Login" class="go" /> <br />
+
+						</td>
+
+					</tr>
+
+				</table>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		</td>
+
+	</tr>
+
+</table>
+</div></div>
+</div>
+</form>
+
+
+
+
+
+</body>
+
+
+
+</html>
+

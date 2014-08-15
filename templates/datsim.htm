@@ -1,0 +1,95 @@
+﻿<form method="post" action="dat-mua-sim-so-dep.html">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default" style="width:100px">
+		<a>Đặt mua sim</a></li>
+	</ul>
+	<div class="ui-tabs-panel ui-widget-content">
+		<table border="0" width="100%" cellspacing="1">
+			<tr>
+				<td>
+				Bạn nhập số bạn cần đặt mua rồi nhấn đặt mua:<table style="width: 100%">
+					<tr>
+						<td>
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tr style="width: 50%">
+								<td a align="right" style="height: 20px">
+							
+								</td>
+								<td style="height: 20px">
+								
+								</td>
+							</tr>
+							<tr style="width: 50%">
+								<td align="center" style="height: 25px; font-weight: 700;" colspan="2">
+							
+									Số bạn cần đặt: <input name="sosim" type="text">
+																
+									<input name="submit" type="submit" value="Đặt mua" class="sub">
+								</td>
+							</tr>
+						
+							<tr>
+								<td align="right" colspan="2" class="dvc">
+							{if $mo == 1}
+								<table style="width: 100%" cellspacing="1">
+									<tr class="chucam">
+										<td style="height: 22px" colspan="5">&nbsp;
+										</td>
+									</tr>
+									<tr class="chucam">
+										<td style="height: 22px" colspan="5">
+										<strong>Số bạn cần mua hiện không có trên 
+										website của chúng tôi.<br>
+										</strong><strong>Bạn có thể lựa chọn những số gần giống 
+										bên dưới</strong></td>
+									</tr>
+									<tr class="chucam">
+										<td style="width: 7%; height: 22px" class="style10">
+										<strong>STT</strong></td>
+										<td style="width: 20%; height: 22px" class="style10">
+										<strong class="chucam">Số Sim</strong></td>
+										<td style="width: 20%; height: 22px" class="style10">
+										<strong class="chucam">Giá Tiền</strong></td>
+										<td style="width: 20%; height: 22px" class="style10">
+										<strong class="chucam">Mạng</strong></td>
+										<td style="width: 15%; height: 22px" class="style10">
+										<strong class="chucam">Đặt Mua</strong></td>
+									</tr>
+									{section name = d loop = $data}
+									<tr class="{$data[d].class}">
+										<td style="width: 7%" class="dv">{$data[d].stt}</td>
+										<td style="width: 20%" class="tampx">
+										<strong>{$data[d].sim1}</strong></td>
+										<td style="width: 20%" class="tampx">
+										{$data[d].giaban}</td>
+										<td style="width: 20%" class="dv">
+										<strong>{$data[d].mang}</strong></td>
+										<td style="width: 15%" class="dv">
+										<strong>
+										<a class="sub" href="dat-mua-sim-{$data[d].sim2}-cid{$data[d].simid}.html">Đặt 
+										Mua</a></strong></td>
+									</tr>
+									{/section}
+									
+									<tr class="b2">
+										<td class="dv" colspan="5">
+										{$paging}
+										</td>
+									</tr>
+								</table>
+								{/if}
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			</table>
+		
+	</div></div>
+
+		</form>

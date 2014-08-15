@@ -1,0 +1,287 @@
+﻿<script type="text/javascript" src="js/vi.js"></script>
+
+<form action="index.php?act=dathangthanhcong&cid={$cid}" method="post" name="fr" onsubmit="return checkdh();">
+
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+
+		<a>Đặt mua sim {$sosim}</a> </li>
+
+	</ul>
+
+	<div class="ui-tabs-panel ui-widget-content">	
+
+		<table border="0" width="100%" cellspacing="0">
+
+		
+
+			<tr>
+
+				<td>
+
+			
+
+				<table style="width: 100%; " cellspacing="0" cellpadding="0" >
+
+			
+
+					<tr>
+
+						<td colspan="2">
+
+						
+
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+
+							<tr>
+
+								<td>
+
+						
+
+						<table style="width: 100%" cellspacing="1" cellpadding="0">
+
+							<tr class="style10">
+
+								<td style="height: 22px; width: 50%;"><strong>S&#7889; 
+
+								sim</strong></td>
+
+								<td style="width: 50%; height: 22px;">
+
+								<strong>Giá ti&#7873;n</strong></td>
+
+							</tr>
+
+							{section name = d loop = $data}
+							
+							<tr style="text-align: center">
+
+								<td style="height: 22px; width: 50%;"><strong>{$data[d].sim1}<input name="sims[{$data[d].sim1}]" type="hidden" value="{$data[d].giaban} " /></strong></td>
+
+								<td style="width: 50%; height: 22px;"><strong>{$data[d].giaban} 
+
+								</strong><sup>(VN&#272;)<br>
+								<span style="font-size: x-small">( {$data[d].doctien} 
+								)</span></sup></td>
+
+							</tr>
+
+							{/section}
+
+							{if $chon == 1}
+
+							{/if}
+
+							</table>
+
+								</td>
+
+							</tr>
+
+						</table>
+
+</td>
+
+					</tr>
+
+				
+
+					<tr>
+
+						<td colspan="2">&nbsp;
+						</td>
+
+					</tr>
+
+				
+
+					<tr>
+
+						<td colspan="2">
+
+						<div style="text-align:center">
+
+							B&#7897; gõ ti&#7871;ng vi&#7879;t <input onfocus="setTypingMode(0)" type="radio" value="V1" name="switch" />T&#7855;t&nbsp;&nbsp;&nbsp;
+
+							<input class="bvclass" onfocus="setTypingMode(1)" type="radio" value="V1" name="switch" checked/>B&#7853;t</div>
+
+</td>
+
+					</tr>
+
+					<tr>
+
+						<td class="cl30" style="width: 50%">&nbsp;</td>
+
+						<td style="width: 50%" class="cl30">&nbsp;
+
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td class="cl30" style="width: 50%">H&#7885; và Tên: (*)</td>
+
+						<td style="width: 50%" class="cl30">
+
+						<input onkeyup="initTyper(this);" name="post[hovaten]" type="text" style="width: 112px" id="c0" /><span id="namea" style="display:none;font-family:Arial; font-size:10px; color:#999999">VD: Nguyễn Văn A, Nguyễn A</span><input name="sosim" type="hidden" value="{$sosim}"></td>
+
+					</tr>
+
+					<tr>
+
+						<td class="cl30" style="width: 50%">&#272;&#7883;a ch&#7881; nh&#7853;n sim: (*)</td>
+
+						<td style="width: 50%" class="cl30">
+
+						<input onkeyup="initTyper(this);" name="post[diachi]" type="text" style="width: 152px" id="c1" /><span id="diachia" style="display:none;font-family:Arial; font-size:10px; color:#999999">VD: 76 Quan Nhan, Thanh Xuan</span></td>
+
+					</tr>
+
+					<tr>
+
+						<td class="cl30" style="width: 50%">T&#7881;nh thành: (*)</td>
+
+						<td style="width: 50%" class="cl30">
+
+						<select name="post[city]" id="c2">
+
+		<option value="" selected="">-- T&#7881;nh thành --</option>
+
+		{html_options values = $cityn output = $cityn}
+
+		</select></td>
+
+					</tr>
+
+					<tr>
+
+						<td class="cl30" style="width: 50%">Điện thoại: (*)</td>
+
+						<td style="width: 50%" class="cl30">
+
+						<input onkeyup="checkmobi2(this);" name="post[dienthoai]" type="text" style="width: 100px" id="c3" />&nbsp;</td>
+
+					</tr>
+
+					<tr>
+
+						<td class="cl30" style="width: 50%">Email:</td>
+
+						<td style="width: 50%" class="cl30">
+
+						<input name="post[email]" class="style28" style="width: 152; height:21" id="tel" />&nbsp;</td>
+
+					</tr>
+
+					<tr>
+
+						<td colspan="2" class="cl30">
+
+						
+
+							Ghi chú:</td>
+
+					</tr>
+
+					<tr>
+
+						<td colspan="2" align="center">
+
+						
+
+							<textarea onkeyup="initTyper(this);" name="post[note]" style="width: 221px; height: 35px"></textarea>
+
+						&nbsp;<br />
+
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td colspan="2">&nbsp;
+
+						
+
+							</td>
+
+					</tr>
+
+					
+
+					<tr>
+
+						<td colspan="2" class="dvc" style="text-align: center">
+
+						<br/>
+
+						
+
+							<input name="submit" value="Đặt hàng" type="submit" class="sub">&nbsp;<input name="Reset1" type="reset" value="Làm lại" class="sub">
+
+							
+
+							<input onclick="add_sim('{$sosim}','{$data[0].giaban}');alert('Đã thêm {$data[0].sim1} vào giỏ hàng');add_sim('{$sosim}','{$data[0].giaban}')" name="chon" type="button" value="Thêm vào giỏ hàng" class="sub"><br />
+
+						<br>
+
+						<br>
+
+						Vi&#7879;c &#273;&#7863;t hàng qua website g&#7863;p khó kh&#259;n quý khách hãy g&#7885;i
+
+						<strong>{$my_hl1}</strong> 
+
+						ho&#7863;c <strong>{$my_hl2}</strong> &#273;&#7875; &#273;&#7863;t mua sim qua &#273;i&#7879;n tho&#7841;i !<br /></td>
+
+					</tr>
+
+			
+
+					<tr>
+
+						<td colspan="2" class="dvc">
+
+						
+
+							</td>
+
+					</tr>
+
+					
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			
+
+			</table>
+
+	
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+<script type="text/javascript" language="javascript">setTypingMode(1);</script>
+

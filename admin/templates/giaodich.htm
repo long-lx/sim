@@ -1,0 +1,86 @@
+﻿				
+
+				<table style="width: 100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="height: 22px; width: 50%">
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tr>
+								<td colspan="3">
+										<form method="GET">
+										<input type="hidden" name="act" value="giaodich">
+											<input name="v" type="checkbox" value="1"><input name="text" type="text">&nbsp;
+											<input name="submit" type="submit" value="Tìm kiếm" class="go">&nbsp;&nbsp;&nbsp;
+											<select name="Select1" onchange="window.location.href='index.php?{$c_url}&daily='+this.options[selectedIndex].value+'';">
+											<option value="0" selected="">Xem theo đại lý
+											</option>
+											{html_options values=$xvalues output=$xnames}
+											</select>
+											<input onclick="window.location.href='index.php?act=giaodich'" name="Button1" type="button" value="Mới" class="go">
+											<input onclick="window.location.href='index.php?act=giaodich&daxoa=1'" name="Button2" type="button" value="Đã Xóa" class="go"> <input onclick="window.location.href='aindex.php?{$c_url}&in=1'" name="Button3" type="button" value="IN Giao dịch" class="go"><input onclick="window.location.href='aindex.php?{$urls}'" name="Button4" type="button" value="Xuất Excel" class="go"></form>
+										&nbsp;</td>
+							</tr>
+					
+						</table>
+						</td>
+				
+					</tr>
+					<tr class="chudam">
+						<td valign="top">
+						<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+		<a>Thống kê giao dịch</a></li>
+	</ul>
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+
+						<table style="width: 100%" cellspacing="1">
+							<tr class="ui-widget-header" style="height:40px">
+								<td style="width: 5%; height: 22px;">
+								<strong>STT</strong></td>
+								<td style="width: 10%; height: 22px;"><strong>NGÀY</strong></td>
+								<td style="width: 15%; height: 22px;">
+								<strong>NGƯỜI MUA</strong></td>
+								<td style="width: 15%; height: 22px;"><strong>SỐ SIM</strong></td>
+								<td style="width: 10%; height: 22px;"><strong>GIÁ NHẬP</strong></td>
+								<td style="width: 10%; height: 22px;"><strong>GIÁ BÁN</strong></td>
+								<td style="width: 5%; height: 22px;"><strong>CK</strong></td>
+								<td style="width: 5%; height: 22px;">
+								<strong>PK</strong></td>
+								<td style="width: 10%; height: 22px;"><strong>TIỀN LÃI</strong></td>
+								<td style="height: 22px; width: 10%;"><strong>BÁO</strong></td>
+							</tr>
+							{section name=d1 loop=$data}
+							<tr class="{$data[d1].class}" style="height:22px;">
+								<td style="width: 5%">{$data[d1].stt}</td>
+								<td style="width: 10%">{$data[d1].ngay}</td>
+								<td style="width: 15%">{$data[d1].hovaten}</td>
+								<td style="width: 15%">{$data[d1].sosim}</td>
+								<td style="width: 10%">{$data[d1].gianhap}</td>
+								<td style="width: 10%">{$data[d1].giaban}</td>
+								<td style="width: 5%">{$data[d1].hoahong}%</td>
+								<td style="width: 5%"><strong>{$data[d1].phikhac}</strong></td>
+								<td style="width: 10%">{$data[d1].lai}</td>
+								<td style="width: 10%"><a href="../daily/aindex.php?act=baosai&id={$data[d1].id}" rel="lyteframe" title="Báo sai lệch" rev="width: 400px; height: 300px; scrolling: no;">
+						Báo </a>
+							{if $admins ==1}
+								/<a href="aindex.php?act=giaodichedit&id={$data[d1].id}" rel="lyteframe" title="Sửa giao dịch" rev="width: 400px; height: 420px; scrolling: yes;">Sửa 
+								</a>/&nbsp; 
+								<a onclick="return conf('giao dịch của {$data[d1].hovaten}')" href="index.php?{$c_url}&del={$data[d1].id}">Xóa</a>
+								{/if}
+								</td>
+							</tr>
+							{/section}
+							<tr >
+								<td colspan="10"><strong>Tổng đã bán : 
+								{$tongnhap1}&nbsp;&nbsp; Tổng lãi: {$tonglai}</strong></td>
+							</tr>
+							<tr>
+								<td colspan="10" align="center">{$paging}</td>
+							</tr>
+						</table>
+						</div></div>
+						</td>
+						
+					</tr>
+				</table>
+				

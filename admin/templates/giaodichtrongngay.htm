@@ -1,0 +1,47 @@
+﻿	<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+		<a>Giao Dịch Trong Ngày</a></li>
+	</ul>
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<table style="width: 100%" cellspacing="1">
+							<tr style="height:35px" class="ui-widget-header">
+								<td style="width: 1%; height: 22px;">
+								<strong >STT</strong></td>
+								<td style="width: 3%; height: 22px;" >
+								<strong>SỐ SIM</strong></td>
+								<td style="width: 7%; height: 22px;" >
+								<strong>HỌ VÀ TÊN</strong></td>
+								<td style="width: 10%; height: 22px;" >
+								&nbsp;</td>
+								<td style="width: 6%; height: 22px;" ><strong>GIÁ NHẬP</strong></td>
+								<td style="width: 10%; height: 22px;" ><strong>GIÁ BÁN</strong></td>
+								<td style="width: 10%; height: 22px;" >
+								<strong>Đại lý</strong></td>
+								<td style="width: 10%; height: 22px;" >
+								&nbsp;</td>
+							</tr>
+							{section name=d1 loop=$data}
+							<tr class="{$data[d1].class}">
+								<td style="width: 1%; font-size: medium;">{$data[d1].stt}</td>
+								<td style="width: 3%; font-size: medium;">{$data[d1].sosim}</td>
+								<td style="width: 7%; font-size: medium;">{$data[d1].hovaten}</td>
+								<td style="width: 10%; font-size: small;">
+								{$data[d1].diachi}</td>
+								<td style="width: 6%; font-size: medium;">{$data[d1].gianhap}</td>
+								<td style="width: 10%; font-size: medium;">{$data[d1].giaban}</td>
+								<td style="width: 10%; font-size: small;">
+								<strong>{$data[d1].daily}</strong></td>
+								<td style="width: 10%"><a href="../daily/aindex.php?act=baosai&id={$data[d1].id}" rel="lyteframe" title="Báo sai lệch" rev="width: 400px; height: 300px; scrolling: no;">
+						Báo </a>
+							{if $admins ==1}
+								/<a href="aindex.php?act=giaodichedit&id={$data[d1].id}" rel="lyteframe" title="Sửa giao dịch" rev="width: 400px; height: 420px; scrolling: yes;">Sửa 
+								</a>/&nbsp; 
+								<a onclick="return conf('giao dịch của {$data[d1].hovaten}')" href="index.php?{$c_url}&del={$data[d1].id}">Xóa</a>
+								{/if}
+								</td>
+							</tr>
+							{/section}
+												</table>
+						</div></div>
+				

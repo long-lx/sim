@@ -1,0 +1,64 @@
+﻿<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" language="javascript" src="../ajax.js"></script>
+<link type="text/css" href="../css/jquery-ui-1.8.13.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" language="javascript" src="admin.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.2.6.css" media="screen" />
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.2.6.pack.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-default">
+		<a>Tạo Cron</a> </li>
+	</ul>
+	<div class="ui-tabs-panel ui-widget-content">
+	
+	
+	<script>
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	</script>
+
+<form method="post">
+
+<div class="demo">
+<p>Giờ/phút/giây :{html_select_time use_24_hours=true}
+							<a class="go" onclick="window.back()" href="javascript:voiid(0)">back</a></p>
+<p>Ngày: <input name="d_s" id="datepicker" type="text" value="{$days}"></p>
+
+
+
+</div>
+	<table style="width: 100%" cellspacing="0" cellpadding="0">
+		<tr class="ui-widget-header" style="height:30px">
+			<td>Lệnh Thực Thi&nbsp; <br>
+			Nhắn tin:<input onclick="$('#sms').show('show'); $('#url').hide('show');" name="post[cr_type]" type="radio" checked="checked" style="width: 20px" value="sms"> Get URl:<input onclick="$('#sms').hide('show'); $('#url').show('show');"  name="post[cr_type]" type="radio" value="get"></td>
+		</tr>
+		<tr>
+			<td style="text-align: center">
+			<div id="sms">
+				Danh sách nhận tin<br>
+				<input name="post[cr_to]" type="text" style="width: 212px; height: 32px" id="to"><br>
+				Nội dung tin nhắn<br>
+				<textarea name="post[cr_msg]" style="height: 147px; width: 213px"></textarea><br>
+				<br>
+				<a onclick="document.getElementById('to').value='{$khach}';" href="javascript:void(0)">Khách {$khach}</a> --&nbsp;
+				<a onclick="document.getElementById('to').value='{$daily}';" href="javascript:void(0)">Đại lý {$daily}</a><br>
+			
+				
+			</div>
+			<div id="url" style="display:none">
+				URL:<input name="cr_url" type="text" style="width: 212px; height: 32px"></div>
+				<input class="go" name="submit" type="submit" value="Tạo Cron">
+			</td>
+			
+		</tr>
+	</table>
+
+			</div>
+</div>
+</form>
